@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "jquery": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "strict": 0,
+    "camelcase": 0,
+    "quotes": [1, "single", "avoid-escape"],
+    "no-console": 0
+  }
+}

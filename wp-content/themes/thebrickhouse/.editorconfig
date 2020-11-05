@@ -1,0 +1,27 @@
+# https://EditorConfig.org
+
+# NOTE:
+# For this configuration file to work in your editor, you must install the
+# appropriate EditorConfig plugin. Check out the https://EditorConfig.org site
+# for instructions.
+
+# This is the top-most EditorConfig file.
+root = true
+
+# All files:
+[*]
+
+# Unix-style newlines.
+end_of_line = lf
+
+# Add a newline at end of file on save.
+insert_final_newline = true
+
+# Trim trailing whitespace on save.
+trim_trailing_whitespace = true
+
+# Indent with spaces.
+indent_style = space
+
+# Use two spaces per indentation level.
+indent_size = 2

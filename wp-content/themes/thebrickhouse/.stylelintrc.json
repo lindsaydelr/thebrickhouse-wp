@@ -1,0 +1,66 @@
+{
+  "plugins": [
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-order",
+    "stylelint-scss"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "block-opening-brace-space-before": "always-multi-line",
+    "block-opening-brace-newline-after": "always-multi-line",
+    "color-no-invalid-hex": true,
+    "comment-empty-line-before": [ "always", {
+      "ignore": [
+        "stylelint-commands",
+        "after-comment"
+      ]
+    } ],
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-after": "always-single-line",
+    "indentation": [ 2, {
+      "ignore": [
+        "value"
+      ]
+    } ],
+    "function-comma-space-before": "never",
+    "function-comma-space-after": "always",
+    "function-max-empty-lines": 1,
+    "max-empty-lines": 2,
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-alphabetical-order": true,
+    "plugin/declaration-block-no-ignored-properties": true,
+    "property-case": "lower",
+    "rule-empty-line-before": [ "always-multi-line", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"]
+    } ],
+    "scss/at-function-named-arguments": [ "always", {
+      "ignore": [
+        "single-argument"
+      ]
+    } ],
+    "scss/at-function-parentheses-space-before": "never",
+    "scss/at-mixin-named-arguments": [ "always", {
+      "ignore": [
+        "single-argument"
+      ]
+    } ],
+    "scss/at-mixin-parentheses-space-before": "never",
+    "scss/dollar-variable-colon-space-after": "at-least-one-space",
+    "scss/dollar-variable-colon-newline-after": "always-multi-line",
+    "scss/double-slash-comment-empty-line-before": [ "always", {
+      "except": [
+        "first-nested"
+      ],
+      "ignore": [
+        "between-comments"
+      ]
+    } ],
+    "scss/double-slash-comment-whitespace-inside": "always",
+    "selector-list-comma-newline-after": "always",
+    "selector-nested-pattern": "^&"
+  }
+}

@@ -1,0 +1,5 @@
+# Browsers that we support.
+# https://github.com/browserslist/browserslist
+
+last 1 version and not dead and > .1%
+not OperaMini all
