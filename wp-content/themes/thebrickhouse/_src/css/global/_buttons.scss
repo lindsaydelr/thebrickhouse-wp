@@ -1,0 +1,42 @@
+button,
+input[type="submit"],
+[class*="button--"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: $color--black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family--heading;
+  font-size: $font-size--big;
+  line-height: 1;
+  padding-bottom: 6px;
+  padding-left: $padding--md;
+  padding-right: $padding--md;
+  padding-top: 8px;
+  text-align: center;
+  transition: background-color $transition-duration--fast,
+    border $transition-duration--fast;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color--brick;
+      border-color: $color--brick;
+    }
+  }
+}
+
+input[type="submit"] {
+  background-color: $color--black;
+  color: $color--white;
+  text-transform: uppercase;
+
+  @media (max-width: $screen--sm-max) {
+    display: block;
+    width: 100%;
+  }
+}

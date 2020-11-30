@@ -1,0 +1,43 @@
+{
+    "key": "group_5fb5b8e082e8b",
+    "title": "Introductory Statement",
+    "fields": [
+        {
+            "key": "field_5fb5b8e68cdcf",
+            "label": "Introductory Statement",
+            "name": "homepage_introductory_statement",
+            "type": "wysiwyg",
+            "instructions": "A short paragraph shown on the homepage. Should probably include a link to the About page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "__wysiwyg-small __hide-label __wysiwyg-collapse-label",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "bold_italic_links",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "homepage"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1605821679
+}

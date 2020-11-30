@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: $color--white;
+  min-height: 100%;
+}
+
+
+// When a modal window is open, don't allow the body to scroll.
+body.overlay-is-open,
+body.popup-is-open {
+  overflow: hidden;
+}
+
+
+// Make room for the fixed header.
+.page-content {
+  padding-top: $header-height;
+}
+
+
+// Constrain the maximum width of a container element.
+.constrain {
+  margin-left: $gutter--mobile;
+  margin-right: $gutter--mobile;
+  position: relative;
+  width: calc(100% - #{$gutter--mobile} - #{$gutter--mobile});
+
+  @media (min-width: $screen--md) {
+    margin-left: $gutter--tablet;
+    margin-right: $gutter--tablet;
+    width: calc(100% - #{$gutter--tablet} - #{$gutter--tablet});
+  }
+
+  @media (min-width: $screen--lg) {
+    margin-left: $gutter--desktop;
+    margin-right: $gutter--desktop;
+    width: calc(100% - #{$gutter--desktop} - #{$gutter--desktop});
+  }
+
+  @media (min-width: $max-content-width-plus-gutters) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-content-width;
+  }
+}
+
+.constrain--wide {
+  position: relative;
+  width: 100%;
+
+  @media (max-width: $screen--sm-max) {
+    padding-left: $gutter--mobile;
+    padding-right: $gutter--mobile;
+  }
+
+  @media (min-width: $screen--md) {
+    margin-left: $gutter--tablet;
+    margin-right: $gutter--tablet;
+    width: calc(100% - #{$gutter--tablet} - #{$gutter--tablet});
+  }
+
+  @media (min-width: $screen--lg) {
+    margin-left: $gutter--desktop;
+    margin-right: $gutter--desktop;
+    width: calc(100% - #{$gutter--desktop} - #{$gutter--desktop});
+  }
+
+  @media (min-width: $max-background-width-plus-gutters) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-background-width;
+  }
+}
+
+.constrain--narrow {
+  margin-left: $gutter--mobile;
+  margin-right: $gutter--mobile;
+  max-width: 960px;
+  position: relative;
+  width: calc(100% - #{$gutter--mobile} - #{$gutter--mobile});
+
+  @media (min-width: $screen--md) {
+    margin-left: $gutter--tablet;
+    margin-right: $gutter--tablet;
+    width: calc(100% - #{$gutter--tablet} - #{$gutter--tablet});
+  }
+
+  @media (min-width: $max-narrow-width-plus-gutters) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Sidebar and main area. */
+
+// Mobile: main section and sidebar are stacked.
+.sidebar {
+  margin-top: $section-vertical-margin;
+}
+
+// Tablet up: main section and sidebar are side by side.
+@media (min-width: $screen--lg) {
+  .main-and-sidebar {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main {
+    flex: 1;
+    margin-right: $sidebar-gutter;
+  }
+
+  .sidebar {
+    margin-top: 0;
+    width: $sidebar-width;
+  }
+}
+
+
+// Display utility classes.
+.display--mobile-only {
+  display: none;
+
+  @media (max-width: $screen--sm-max) {
+    display: block;
+  }
+}
+
+.display--tablet-up {
+  display: none;
+
+  @media (min-width: $screen--md) {
+    display: block;
+  }
+}
+
+.display--desktop-up {
+  display: none;
+
+  @media (min-width: $screen--lg) {
+    display: block;
+  }
+}
+
+.display--wide-up {
+  display: none;
+
+  @media (min-width: $screen--xl) {
+    display: block;
+  }
+}
+
+
+// Full-bleed on mobile.
+.full-bleed--mobile {
+  @media (max-width: $screen--sm-max) {
+    margin-left: -#{$gutter--mobile};
+    margin-right: -#{$gutter--mobile};
+    padding-left: $gutter--mobile;
+    padding-right: $gutter--mobile;
+  }
+}

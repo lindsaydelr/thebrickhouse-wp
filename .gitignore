@@ -11,6 +11,7 @@
 .env
 _temp
 node_modules
+local-phpinfo.php
 
 # Don't track .htaccess, this is handled by WP Engine.
 .htaccess

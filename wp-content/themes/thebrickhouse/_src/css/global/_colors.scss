@@ -1,0 +1,38 @@
+/* stylelint-disable */
+// Disable StyleLint's usual rules for indentation and single-line rule
+// declarations in order to make this file more readable.
+
+.background--black     { background-color: $color--black;     }
+.background--white     { background-color: $color--white;     }
+.background--brick     { background-color: $color--brick;     }
+.background--dark-tan  { background-color: $color--dark-tan;  }
+.background--light-tan { background-color: $color--light-tan; }
+
+.border--black     { border-color: $color--black;     }
+.border--white     { border-color: $color--white;     }
+.border--brick     { border-color: $color--brick;     }
+.border--dark-tan  { border-color: $color--dark-tan;  }
+.border--light-tan { border-color: $color--light-tan; }
+
+.color--black     { color: $color--black;      }
+.color--white     { color: $color--white;      }
+.color--brick     { color: $color--brick;      }
+.color--dark-tan  { color: $color--dark-tan;   }
+.color--light-tan { color: $color--light-tan;  }
+
+@media (max-width: $screen--sm-max) {
+  .color--black--mobile     { color: $color--black;        }
+  .color--white--mobile     { color: $color--white;        }
+  .color--brick--mobile     { color: $color--brick;        }
+  .color--dark-tan--mobile  { color: $color--dark-tan;     }
+  .color--light-tan--mobile { color: $color--light-tan;  }
+}
+
+@media (min-width: $screen--md) {
+  .color--black--nonmobile     { color: $color--black;       }
+  .color--white--nonmobile     { color: $color--white;       }
+  .color--brick--nonmobile     { color: $color--brick;       }
+  .color--dark-tan--nonmobile  { color: $color--dark-tan;    }
+  .color--light-tan--nonmobile { color: $color--light-tan; }
+}
+/* stylelint-enable */

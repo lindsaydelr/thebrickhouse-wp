@@ -1,0 +1,40 @@
+// Custom focus states for links and form elements.
+body.user-is-tabbing {
+  // Nav items.
+  & .menu-item a:focus,
+  // Nav logo.
+  & .page-header__logo a:focus,
+  // Footer logo.
+  & .page-footer__logo a:focus,
+  // Links in a box.
+  & a.link--cta:focus {
+    background-color: rgba($color--brick, 0.2);
+    outline: 0;
+  }
+
+  // Form inputs.
+  & input[type=date]:focus,
+  & input[type=email]:focus,
+  & input[type=file]:focus,
+  & input[type=month]:focus,
+  & input[type=number]:focus,
+  & input[type=password]:focus,
+  & input[type=search]:focus,
+  & input[type=tel]:focus,
+  & input[type=text]:focus,
+  & input[type=time]:focus,
+  & input[type=url]:focus,
+  & input[type=week]:focus,
+  & textarea:focus,
+  & select:focus {
+    background-color: rgba($color--brick, 0.2);
+    outline: 1px solid $color--brick;
+  }
+
+  & input[type="button"]:focus,
+  & input[type="submit"]:focus {
+    background-color: rgba($color--brick, 0.5);
+    border: 1px solid $color--brick;
+    outline: 0;
+  }
+}

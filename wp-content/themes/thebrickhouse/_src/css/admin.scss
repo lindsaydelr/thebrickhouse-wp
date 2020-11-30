@@ -1,0 +1,20 @@
+/*
+ Advanced Custom Fields
+*/
+
+// Move buttons to the left.
+.acf-actions {
+  text-align: left;
+}
+
+// Add 'new window' icon to links in ACF instructions that open in a new window.
+.acf-link-new-window:after {
+  content: "\f504";
+  display: inline-block;
+  font-family: "dashicons";
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  margin-left: 2px;
+  vertical-align: top;
+}

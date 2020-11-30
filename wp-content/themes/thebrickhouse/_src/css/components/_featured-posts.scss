@@ -1,0 +1,64 @@
+.featured-posts {
+  // On desktop: Big story on the left, three smaller ones on the right.
+  @media (min-width: $screen--lg) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $section-vertical-margin;
+
+    & .featured-posts__hero {
+      flex: 1;
+      margin-right: $sidebar-gutter;
+    }
+
+    & .featured-posts__the-rest {
+      width: $sidebar-width;
+    }
+
+    & .post-preview {
+      margin-top: $padding--lg;
+    }
+
+    & .post-preview--sidebar {
+      @include bottom-border-separator( $bottom-border-for-last-item: false );
+    }
+
+    & .post-preview--sidebar .post-preview__description {
+      display: none;
+    }
+  }
+}
+
+.featured-posts .post-preview {
+  // Until desktop, use divider lines.
+  @media (max-width: $screen--md-max) {
+    @include bottom-border-separator( $bottom-border-for-last-item: false );
+
+    // Make sure the hero post has a bottom border.
+    &.post-preview--hero {
+      padding-bottom: $post-list-padding;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  // On desktop, move image under description.
+  @media (min-width: $screen--lg) {
+    display: grid;
+    grid-template-areas:
+        "logo title"
+        "logo author"
+        "logo desc"
+        "logo image"
+        "logo footer";
+    ;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(5, min-content);
+
+    & .post-preview__thumbnail {
+      margin-left: 0;
+      margin-top: $padding--sm;
+    }
+  }
+}

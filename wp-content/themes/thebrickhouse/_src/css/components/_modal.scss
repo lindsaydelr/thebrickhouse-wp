@@ -1,0 +1,60 @@
+// TODO: Is this necessary?
+.modal-overlay {
+  background-color: rgba(#000, 0.8);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity $transition-duration--slow,
+    visibility $transition-duration--slow;
+  visibility: hidden;
+  width: 100%;
+}
+
+body.overlay-is-open .modal-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-popup {
+  background-color: $color--white;
+  left: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 250px;
+  min-width: 250px;
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity $transition-duration--slow,
+    visibility $transition-duration--slow;
+  visibility: hidden;
+
+  @media (min-width: $screen--md) {
+    min-width: 600px;
+  }
+}
+
+.modal-popup__close-button {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: -25px;
+
+  & .svg-container {
+    height: 15px;
+    width: 15px;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+body.popup-is-open .modal-popup {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,112 @@
+@mixin font-size--paragraph {
+  font-size: $font-size--paragraph--mobile;
+
+  @media (min-width: $screen--md) {
+    font-size: $font-size--paragraph--tablet;
+  }
+
+  @media (min-width: $screen--lg) {
+    font-size: $font-size--paragraph--desktop;
+  }
+}
+
+@mixin font-size--small {
+  font-size: $font-size--small--mobile;
+  line-height: $line-height--small;
+
+  @media (min-width: $screen--md) {
+    font-size: $font-size--small--tablet;
+  }
+
+  @media (min-width: $screen--lg) {
+    font-size: $font-size--small--desktop;
+  }
+}
+
+@mixin bottom-border-separator( $left-offset: 0, $bottom-border-for-last-item: true ) {
+  margin-top: $post-list-padding;
+  padding-bottom: $post-list-padding;
+  position: relative;
+
+  &:after {
+    border-top: 2px solid $color--brick;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: $left_offset;
+    position: absolute;
+    right: 0;
+  }
+
+  @if not $bottom-border-for-last-item {
+    &:last-child {
+      padding-bottom: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+// This mixin turns the items in a container into a 2-column grid on tablet and
+// a 3-column grid on desktop. On mobile, the contents stay stacked in a single
+// column. At all sizes, there are horizontal dividing lines between the items.
+//
+// There is also an option whether or not to use the grid on desktop (if not,
+// then the grid is only used on tablet). $on-desktop is switched ON by default.
+@mixin list-grid( $on-desktop: true ) {
+  // If we're only targeting tablet, change the media query.
+  $tablet-media-query: "(min-width: #{$screen--md}) and (max-width: #{$screen--md-max})";
+
+  @if $on-desktop {
+    $tablet-media-query: "(min-width: #{$screen--md})";
+  }
+
+  // Tablet: 2 items per row.
+  @media #{$tablet-media-query} {
+    display: flex;
+    flex-wrap: wrap;
+
+    // Left-align the items when there aren't enough to fill the row.
+    justify-content: flex-start;
+
+    margin-left: -$grid-gutter;
+    width: calc(100% + $grid-gutter);
+
+    & > * {
+      flex: 1 1 50%;
+
+      // Left-align the items when there aren't enough to fill the row.
+      max-width: 50%;
+
+      padding-left: $grid-gutter;
+      width: calc(100% + #{$grid-gutter});
+    }
+  }
+
+  @if $on-desktop {
+    // Desktop: 3 items per row.
+    @media (min-width: $screen--lg) {
+      & > * {
+        flex: 1 1 33.33333%;
+        max-width: 33.33333%;
+      }
+    }
+  }
+}
+
+@mixin bg-pattern--tan-brick {
+  background-color: #ebdbc2;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23be8d3f' fill-opacity='0.09'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@mixin bg-pattern--red-brick {
+  background-color: #823111;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23be8d3f' fill-opacity='0.1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@mixin bg-pattern--red-rain {
+  background-color: #823111;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23be8d3f' fill-opacity='0.11' fill-rule='evenodd'/%3E%3C/svg%3E");
+}

@@ -1,0 +1,141 @@
+{
+    "key": "group_5fab31485cac0",
+    "title": "Publication Details",
+    "fields": [
+        {
+            "key": "field_5fb4b6d118b4c",
+            "label": "In Multisite Network?",
+            "name": "publication_in_multisite_network",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "__hide-label",
+                "id": ""
+            },
+            "message": "In Multisite Network?",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5faf5b5d9a2a9",
+            "label": "Site",
+            "name": "publication_site",
+            "type": "sites",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fb4b6d118b4c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_type": "select",
+            "allow_null": 0,
+            "status": "all",
+            "hide_main": 1,
+            "site__not_in": "",
+            "return_value": "id"
+        },
+        {
+            "key": "field_5fb4b6ec18b4d",
+            "label": "URL",
+            "name": "publication_url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fb4b6d118b4c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fab314b091fe",
+            "label": "Logo",
+            "name": "publication_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 300,
+            "min_height": 300,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5faf1996c29d3",
+            "label": "Description",
+            "name": "publication_description",
+            "type": "text",
+            "instructions": "Keep it short.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "publication"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1605678882
+}

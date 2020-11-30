@@ -1,0 +1,33 @@
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.svg-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+svg {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+// Inherit the current color for SVG icons.
+.svg-container:not(.no-fill) svg g,
+.svg-container:not(.no-fill) svg path {
+  fill: currentColor;
+}
+
+// Change the stroke if the SVG has a single <path> element and it has a stroke
+// attribute defined.
+.svg-container:not(.no-fill) svg path:only-child[stroke] {
+  stroke: currentColor;
+}
+
+// If an SVG <g>roup element has a stroke, make sure it inherits the current
+// color too.
+.svg-container:not(.no-fill) svg g[stroke] {
+  stroke: currentColor;
+}

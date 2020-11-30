@@ -1,0 +1,79 @@
+{
+    "key": "group_5fb60abad30ae",
+    "title": "External Post",
+    "fields": [
+        {
+            "key": "field_5fb60b2556a39",
+            "label": "Publication",
+            "name": "external_post_publication",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "publication"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_5fb60ac856a38",
+            "label": "URL",
+            "name": "external_post_url",
+            "type": "url",
+            "instructions": "Enter the post URL; the description and thumbnail will be displayed on the website automatically.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "__related",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5fb701fc38032",
+            "label": "Author",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "__related ",
+                "id": ""
+            },
+            "message": "Provide author below; the author cannot be automatically fetched from the URL. <b><a class=\"acf-link-new-window\" target=\"_blank\" href=\".\/post-new.php?post_type=guest-author\">Add a guest author<\/a><\/b>",
+            "new_lines": "",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "external-post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1605830832
+}

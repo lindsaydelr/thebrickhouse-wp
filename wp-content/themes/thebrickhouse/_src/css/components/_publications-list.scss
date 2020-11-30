@@ -1,0 +1,62 @@
+// List of publications.
+.publications-list {
+  @include list-grid( $on-desktop: false );
+  margin-bottom: $padding--lg;
+  margin-top: $padding--lg;
+}
+
+.publications-list__item {
+  @include bottom-border-separator( $left-offset: $grid-gutter, $bottom-border-for-last-item: false );
+
+  @media (min-width: $screen--lg) {
+    @include bottom-border-separator();
+  }
+
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: $screen--sm-max) {
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      & .publications-list__logo {
+        margin-left: $padding--md;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.publications-list__link {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.publications-list__logo {
+  margin-right: $padding--md;
+}
+
+.publications-list__logo img {
+  height: auto;
+  width: 90px;
+}
+
+.publications-list__title-and-description {
+  flex: 1;
+}
+
+.publications-list__title {
+  font-family: $font-family--heading;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.publications-list__description {
+  @include font-size--small;
+}

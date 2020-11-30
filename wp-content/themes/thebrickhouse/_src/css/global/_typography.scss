@@ -1,0 +1,157 @@
+html {
+  color: $color--black;
+  font-family: $font-family--serif;
+  font-size: $font-size--base--mobile;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: $line-height--base;
+
+  @media (min-width: $screen--md) {
+    font-size: $font-size--base--tablet;
+  }
+
+  @media (min-width: $screen--md) {
+    font-size: $font-size--base--desktop;
+  }
+}
+
+// Change text selection colors.
+::selection {
+  background: $color--brick;
+  color: $color--white;
+  text-shadow: none;
+}
+
+
+/**
+ * Generic text styles.
+ */
+
+// Headings.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family--heading;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: $font-size--heading-1--mobile;
+  line-height: $line-height--heading-1--mobile;
+
+  @media (min-width: $screen--md) {
+    font-size: $font-size--heading-1--desktop;
+  }
+}
+
+h2 {
+  font-size: $font-size--heading-2--mobile;
+  line-height: $line-height--heading-2--mobile;
+  margin-bottom: $padding--md;
+  text-transform: uppercase;
+
+  @media (min-width: $screen--md) {
+    font-size: $font-size--heading-2--desktop;
+    line-height: $line-height--heading-2--desktop;
+  }
+}
+
+h3 {
+  font-size: $font-size--heading-3--mobile;
+  line-height: $line-height--heading-3--mobile;
+  margin-bottom: $padding--md;
+
+  @media (min-width: $screen--md) {
+    font-size: $font-size--heading-3--desktop;
+    line-height: $line-height--heading-3--desktop;
+  }
+}
+
+// Body copy, paragraphs, lists.
+.page-content p,
+.page-content li {
+  @include font-size--paragraph;
+  line-height: $line-height--paragraph;
+}
+
+.page-content p {
+  margin-bottom: $padding--md;
+  margin-top: $padding--md;
+}
+
+.page-content p:only-child {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.page-content p:first-child {
+  margin-top: 0;
+}
+
+.page-content p:last-child {
+  margin-bottom: 0;
+}
+
+.page-content h2 + p,
+.page-content h3 + p {
+  margin-top: $padding--sm;
+}
+
+.page-content p + ul,
+.page-content p + ol {
+  margin-top: -1rem;
+}
+
+.page-content ul li,
+.page-content ol li {
+  margin-bottom: $padding--sm;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--right {
+  text-align: right;
+}
+
+// Links.
+a {
+  color: $color--blue;
+  text-decoration: underline;
+}
+
+// Buttons.
+button,
+[class*="button--"] {
+  font-family: $font-family--heading;
+  font-size: $font-size--big;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+// Nav menus.
+.menu-item {
+
+}
+
+// Nav menus: increase target area for links.
+.menu-item a {
+  display: inline-block;
+  margin: -8px;
+  padding: 8px 8px 12px 8px;
+  position: relative;
+}

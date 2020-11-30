@@ -1,0 +1,68 @@
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+/*! ./modules/accessibility */
+
+/*! ./modules/embeds */
+
+/*! ./modules/mobile-nav */
+
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+
+/*! exports [not provided] [no usage info] */
+
+/*! namespace exports */
+
+/*! other exports [not provided] [no usage info] */
+
+/*! reframe.js */
+
+/*! runtime requirements:  */
+
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+
+/*! unknown exports (runtime-defined) */
+
+/*!*************************!*\
+  !*** ./_src/js/main.js ***!
+  \*************************/
+
+/*!***********************************!*\
+  !*** ./_src/js/modules/embeds.js ***!
+  \***********************************/
+
+/*!***************************************!*\
+  !*** ./_src/js/modules/mobile-nav.js ***!
+  \***************************************/
+
+/*!******************************************!*\
+  !*** ./_src/js/modules/accessibility.js ***!
+  \******************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/reframe.js/dist/reframe.es.js ***!
+  \****************************************************/
+
+/**
+  reframe.js - Reframe.js: responsive iframes for embedded content
+  @version v3.0.2
+  @link https://github.com/yowainwright/reframe.ts#readme
+  @author Jeff Wainwright <yowainwright@gmail.com> (http://jeffry.in)
+  @license MIT
+**/

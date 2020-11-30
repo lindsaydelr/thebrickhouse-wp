@@ -29,13 +29,11 @@ module.exports = {
     ]
   },
   optimization: {
+    minimize: true,
     minimizer: [
       new TerserPlugin({
-        // https://github.com/webpack-contrib/terser-webpack-plugin#options
-        cache: true,
-        parallel: true,
-        extractComments: true,
         terserOptions: {
+          // https://github.com/webpack-contrib/terser-webpack-plugin#options
           compress: {
             drop_console: true,
           },

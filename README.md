@@ -63,7 +63,17 @@ plugins, grab the latest staging/production database, and then get to work.
     handled by a library called TGM Plugin Activation; see the file at
     `wp-content/themes/thebrickhouse/include/required-plugins.php` for details.
 
-08. Mark this as the development environment by adding this constant to the
+08. Make a few symlinks in the root of the site folder to make navigation
+    easier.
+
+    ```sh
+    cd ~/Local\ Sites/the-brick-house/
+    ln -s app/public/ repo
+    ln -s app/public/wp-content/plugins/ plugins
+    ln -s app/public/wp-content/themes/brickhouse/ theme
+    ```
+
+09. Mark this as the development environment by adding this constant to the
     `wp-config.php` file around line 65 (you should still be the `app/public` WP
     core directory):
 
@@ -72,12 +82,12 @@ plugins, grab the latest staging/production database, and then get to work.
     define( 'WP_ENVIRONMENT_TYPE', 'development' );
     ```
 
-09. Activate the theme. Go to the
+10. Activate the theme. Go to the
     [WordPress admin theme settings](https://brickhouse.local/wp-admin/themes.php)
     and log in (username `admin` and password `admin` unless you changed that
     during setup). Under 'The Brick House' in the theme list, click 'Activate.'
 
-10. Once you activate the theme, you'll get a warning that some plugins are
+11. Once you activate the theme, you'll get a warning that some plugins are
     required. Click the 'Begin Installing Plugins' link in that warning. Select
     all of the plugins in the list, install them, then activate them.
 
@@ -159,7 +169,15 @@ images without having to download them.
 
 1. Make sure you have [Node and NPM installed](https://docs.npmjs.com/getting-started/installing-node).
 
-2. Install dependencies:
+2. Navigate to the theme folder. (This uses the symlinks created in 'Setup, Part
+   1'.)
+
+   ```sh
+   cd ~/Local\ Sites/the-brick-house/app/public/
+   cd theme
+   ```
+
+3. Install dependencies:
 
     ```sh
     npm install
@@ -184,6 +202,13 @@ images without having to download them.
 ### How to Watch Files and Compile Assets While Developing the Website
 
 Gulp is used to handle development tasks.
+
+First, navigate into the theme folder:
+
+   ```sh
+   cd ~/Local\ Sites/the-brick-house/app/public/
+   cd theme
+   ```
 
 To start the asset compilation, run the script that builds and watches for
 changes in the CSS/JS/images folders:
@@ -241,7 +266,7 @@ Once you've confirmed you have Git access, you can add the remotes to Git.
 
 This script will compile minified assets, bump the cache-busting version number,
 make a deployment commit, push it to GitHub, and then deploy it to the staging
-environment.
+environment. (Make sure to run this from within the repo.)
 
 ```sh
 npm run deploy-staging
@@ -251,7 +276,7 @@ npm run deploy-staging
 
 This script will compile minified assets, bump the cache-busting version number,
 make a deployment commit, push it to GitHub, and then deploy it to the production
-environment.
+environment. (Make sure to run this from within the repo.)
 
 ```sh
 npm run deploy-production

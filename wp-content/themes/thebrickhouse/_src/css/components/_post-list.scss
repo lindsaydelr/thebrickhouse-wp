@@ -1,0 +1,3 @@
+.post-list .post-preview {
+  @include bottom-border-separator( $bottom-border-for-last-item: false );
+}

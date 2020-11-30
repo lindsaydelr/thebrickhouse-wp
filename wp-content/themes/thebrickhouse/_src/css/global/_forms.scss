@@ -1,0 +1,65 @@
+// Fields
+input[type=date],
+input[type=email],
+input[type=file],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+label:before,
+select,
+textarea {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 auto;
+  padding: $padding--sm;
+}
+
+textarea {
+  width: 100%;
+}
+
+input[type=date],
+input[type=email],
+input[type=file],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select {
+  border: 1px solid $color--black;
+  width: 100%;
+}
+
+textarea {
+  border: 1px solid $color--black;
+  padding: 8px 10px;
+}
+
+// Placeholders.
+input::placeholder,
+select::placeholder {
+  color: $color--black;
+  padding-left: 0;
+}
+
+// Autofilled fields: remove default light blue highlight.
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px $color--black inset !important;
+}

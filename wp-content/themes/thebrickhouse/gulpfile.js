@@ -13,7 +13,8 @@ const sass = require('gulp-sass');
 // const stylelint = require('gulp-stylelint');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
-const webpack = require('webpack-stream');
+const webpack = require('webpack');
+const gulpWebpack = require('webpack-stream');
 
 /*
   Configuration variables.
@@ -29,7 +30,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 // Paths.
 const srcDir = './_src';
-const themeDir = './wp-content/themes/thebrickhouse';
+const themeDir = '.';
 const assetsDir = themeDir + '/assets';
 const paths = {
   js: {
@@ -61,7 +62,7 @@ exports.paths = paths;
 const webpackConfig = require('./webpack.' + process.env.NODE_ENV + '.js');
 const compileJS = () => {
   return gulp.src(paths.js.src)
-    .pipe(webpack(webpackConfig))
+    .pipe(gulpWebpack(webpackConfig, webpack))
     .pipe(gulp.dest(paths.js.dest))
 }
 

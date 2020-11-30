@@ -1,0 +1,13 @@
+.screen-reader-shortcut {
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  color: $color--black;
+  left: 20px;
+  padding: 0.5rem;
+  position: absolute;
+  top: -500px;
+
+  &:focus {
+    top: 20px;
+  }
+}

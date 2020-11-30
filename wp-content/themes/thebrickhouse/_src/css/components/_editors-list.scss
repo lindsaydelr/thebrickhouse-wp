@@ -1,0 +1,36 @@
+// List of editors.
+$editors-list-gutter: 50px;
+
+.editors-list {
+  @include list-grid;
+}
+
+.editors-list__item {
+  @include bottom-border-separator( $left-offset: $grid-gutter );
+}
+
+.editors-list__name,
+.editors-list__publication {
+  @include font-size--paragraph;
+  font-family: $font-family--serif;
+  line-height: 1;
+}
+
+.editors-list__name,
+.editors-list__publication,
+.editors-list__bio,
+.editors-list__bio p {
+  display: inline;
+}
+
+.editors-list__name {
+  font-weight: bold;
+}
+
+.editors-list__publication {
+  font-weight: bold;
+}
+
+.editors-list__bio {
+
+}

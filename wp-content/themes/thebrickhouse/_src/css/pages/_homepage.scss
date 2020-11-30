@@ -1,0 +1,29 @@
+.homepage-section {
+
+}
+
+.homepage-section + .homepage-section,
+.main-and-sidebar + .homepage-section {
+  margin-top: $section-vertical-margin;
+}
+
+.homepage-section__title {
+  @include bg-pattern--red-rain;
+  color: $color--white;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 16px $padding--sm 9px;
+  position: relative;
+  text-align: center;
+  text-shadow: -1px 0 0 #000;
+}
+
+.homepage-section__content {
+  margin-top: $padding--sm;
+}
+
+@media (min-width: $screen--lg) {
+  .home .main .post-list .post-preview:first-child {
+    margin-top: 0;
+  }
+}

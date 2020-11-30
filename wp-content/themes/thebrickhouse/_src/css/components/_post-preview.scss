@@ -1,0 +1,116 @@
+.post-preview {
+}
+
+.post-preview__publication-logo {
+  width: 50px;
+}
+
+.post-preview__title {
+  margin: 0;
+}
+
+.post-preview__author {
+  margin: $padding--xs 0;
+
+  & a {
+    color: $color--gray;
+  }
+}
+
+.post-preview__author-prefix {
+  display: none;
+}
+
+.post-preview__description {
+
+}
+
+.post-preview__thumbnail {
+  margin: $padding--sm 0;
+
+  & img {
+    border: 2px solid #eee;
+    display: block;
+  }
+}
+
+.post-preview__footer {
+  @include font-size--small;
+  color: $color--gray;
+  font-family: $font-family--sans;
+  margin-top: $padding--sm;
+
+  & a {
+    color: $color--gray;
+  }
+}
+
+.post-preview__publication,
+.post-preview__date {
+  display: inline;
+}
+
+.post-preview__publication-prefix,
+.post-preview__date-prefix {
+  display: none;
+  text-transform: lowercase;
+}
+
+.post-preview__date:before {
+  content: "•";
+}
+
+.post-preview__date-value {
+
+}
+
+// Mobile: Everything is stacked, and the logo is floated right.
+@media (max-width: $screen--sm-max) {
+  .post-preview__publication-logo {
+    float: right;
+    margin-left: 35px;
+    width: 50px;
+  }
+}
+
+// Tablet: Logo has its own spot to the left of the headline.
+@media (min-width: $screen--md) {
+  .post-preview {
+    display: grid;
+    grid-template-areas:
+      "logo title  image"
+      "logo author image"
+      "logo desc   image"
+      "logo footer image"
+      "logo spacer image";
+    ;
+    grid-template-columns: min-content 1fr 1fr;
+    grid-template-rows: repeat(5, min-content);
+
+    & .post-preview__publication-logo {
+      grid-area: logo;
+      margin-right: $column-gutter;
+    }
+
+    & .post-preview__title {
+      grid-area: title;
+    }
+
+    & .post-preview__author {
+      grid-area: author;
+    }
+
+    & .post-preview__description {
+      grid-area: desc;
+    }
+
+    & .post-preview__footer {
+      grid-area: footer;
+    }
+
+    & .post-preview__thumbnail {
+      grid-area: image;
+      margin: 0 0 0 $column-gutter;
+    }
+  }
+}

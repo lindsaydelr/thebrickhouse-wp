@@ -1,0 +1,23 @@
+.fancy-date {
+  background: $bg-color--light-gray;
+  color: $color--light-gray;
+  font-family: $font-family--heading;
+  line-height: 1;
+  padding: $padding--sm;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.fancy-date__month {
+  font-size: 20px;
+}
+
+.fancy-date__day {
+  font-size: 46px;
+  line-height: 1.1;
+}
+
+.fancy-date__year {
+  font-size: 17px;
+  line-height: .6;
+}

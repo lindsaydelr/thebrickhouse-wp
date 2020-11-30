@@ -1,0 +1,138 @@
+{
+    "key": "group_5fb5b88f142fe",
+    "title": "Editors",
+    "fields": [
+        {
+            "key": "field_5fbd92bf2f9c3",
+            "label": "Publications",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "__hide-label",
+                "id": ""
+            },
+            "message": "Need to <strong><a target=\"_blank\" href=\"edit.php?post_type=publication\">edit the list of publications<\/a><\/strong>?",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5fb601c1711c0",
+            "label": "Editors",
+            "name": "editors",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "__hide-label",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Editor",
+            "sub_fields": [
+                {
+                    "key": "field_5fb5b89761174",
+                    "label": "Name",
+                    "name": "editor_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5fb60ceeaab6d",
+                    "label": "Publication",
+                    "name": "editor_publication",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "__related",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "publication"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5fbd90ebe4ee0",
+                    "label": "Link",
+                    "name": "editor_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "__related",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Twitter URL, perhaps?"
+                },
+                {
+                    "key": "field_5fb5b8b961176",
+                    "label": "Bio",
+                    "name": "editor_bio",
+                    "type": "wysiwyg",
+                    "instructions": "Start with <code>“is”<\/code> so it flows after their name.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "__related __wysiwyg-tiny",
+                        "id": ""
+                    },
+                    "default_value": "is…",
+                    "tabs": "all",
+                    "toolbar": "bold_italic_links",
+                    "media_upload": 0,
+                    "delay": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "homepage"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1606259894
+}

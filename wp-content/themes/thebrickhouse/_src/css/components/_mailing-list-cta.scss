@@ -1,0 +1,47 @@
+.mailing-list-cta {
+  @include bg-pattern--tan-brick;
+  border-bottom: 4px solid $color--dark-tan;
+  border-top: 4px solid $color--dark-tan;
+  font-family: $font-family--sans;
+  line-height: 1;
+  margin: $section-vertical-margin 0;
+  padding: $padding--md;
+  text-align: center;
+}
+
+.mailing-list-cta__heading {
+
+}
+
+.mailing-list-cta__description {
+  @include font-size--paragraph;
+  margin-bottom: $padding--md;
+}
+
+.mailing-list-cta__form {
+
+}
+
+.mailing-list-form {
+  margin: $padding--sm auto 0 auto;
+  max-width: 600px;
+
+  @media (min-width: $screen--md) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+input.mailing-list-form__email-field {
+  background-color: #fff;
+  flex: 1;
+
+}
+
+.mailing-list-form__submit-button {
+  width: 150px;
+
+  @media (max-width: $screen--sm-max) {
+    margin-top: $padding--xs;
+  }
+}
