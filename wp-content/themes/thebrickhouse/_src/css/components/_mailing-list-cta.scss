@@ -4,7 +4,8 @@
   border-top: 4px solid $color--dark-tan;
   font-family: $font-family--sans;
   line-height: 1;
-  margin: $section-vertical-margin 0;
+  margin-bottom: $section-vertical-margin;
+  margin-top: $section-vertical-margin;
   padding: $padding--md;
   text-align: center;
 }

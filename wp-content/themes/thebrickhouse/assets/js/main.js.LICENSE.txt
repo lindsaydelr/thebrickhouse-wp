@@ -19,6 +19,8 @@ PERFORMANCE OF THIS SOFTWARE.
 
 /*! ./modules/mobile-nav */
 
+/*! ./modules/publications-nav */
+
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 
 /*! exports [not provided] [no usage info] */
@@ -54,6 +56,10 @@ PERFORMANCE OF THIS SOFTWARE.
 /*!******************************************!*\
   !*** ./_src/js/modules/accessibility.js ***!
   \******************************************/
+
+/*!*********************************************!*\
+  !*** ./_src/js/modules/publications-nav.js ***!
+  \*********************************************/
 
 /*!****************************************************!*\
   !*** ./node_modules/reframe.js/dist/reframe.es.js ***!

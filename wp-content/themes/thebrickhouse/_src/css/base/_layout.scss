@@ -10,6 +10,7 @@ body {
 
 
 // When a modal window is open, don't allow the body to scroll.
+body.nav-is-open,
 body.overlay-is-open,
 body.popup-is-open {
   overflow: hidden;
@@ -18,7 +19,11 @@ body.popup-is-open {
 
 // Make room for the fixed header.
 .page-content {
-  padding-top: $header-height;
+  padding-top: $header-height--mobile;
+
+  @media (min-width: $screen--lg) {
+    padding-top: $header-height--desktop;
+  }
 }
 
 
@@ -128,6 +133,14 @@ body.popup-is-open {
   display: none;
 
   @media (max-width: $screen--sm-max) {
+    display: block;
+  }
+}
+
+.display--tablet-only {
+  display: none;
+
+  @media (min-width: $screen--md) and (max-width: $screen--md-max) {
     display: block;
   }
 }

@@ -40,36 +40,51 @@ namespace TheBrickHouse;
     <header class="page-header <?php echo $args['header_class']; ?>" role="banner">
       <div class="constrain">
 
-        <div class="page-header-logo">
+        <a class="screen-reader-shortcut" href="#content" tabindex="0">Skip to Content</a>
+
+        <button class="page-header__open-nav-trigger display--mobile-only" id="mobile-nav-open-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="header-nav" aria-label="open nav">
+          <?php echo get_svg( 'menu' ); ?>
+        </button>
+
+        <div class="page-header__logo">
           <a href="<?php echo bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> homepage">
             <?php echo get_svg( 'brick-house-logo-banner', 'no-fill' ); ?>
           </a>
         </div>
 
-        <div class="page-header-nav">
-          <a class="screen-reader-shortcut" href="#content" tabindex="0">Skip to Content</a>
-
-          <button class="page-header__mobile-nav-trigger display--mobile-only" id="mobile-nav-open-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-nav" aria-label="open mobile nav">
-            <?php echo get_svg( 'menu' ); ?>
-          </button>
-
-          <div class="page-header__nav--nonmobile display--tablet-up" id="desktop-header-nav">
-            <nav class="page-header__nav__menu" role="navigation" aria-label="Main Navigation">
-              <?php wp_nav_menu( array( 'theme_location' => 'desktop-header' ) ); ?>
-            </nav>
-          </div>
-
-          <button class="PicoRule header-subscribe-button">Subscribe</button>
-        </div>
-
-        <div class="mobile-nav display--mobile-only mobile-nav--hidden" id="mobile-nav">
-          <button class="mobile-nav__close-trigger" id="mobile-nav-close-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-nav" aria-label="close mobile nav">
+        <div class="page-header__nav" id="header-nav">
+          <button class="page-header__close-nav-trigger display--mobile-only" id="mobile-nav-close-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="header-nav" aria-label="close nav">
             <?php echo get_svg( 'close' ); ?>
           </button>
-          <nav class="mobile-nav__menu" role="navigation" aria-label="Mobile Main Navigation">
-            <?php // wp_nav_menu( array( 'theme_location' => 'mobile-hamburger' ) ); ?>
+          <div class="page-header__nav__logo display--mobile-only">
+            <a href="<?php echo bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> homepage">
+              <?php echo get_svg( 'brick-house-logo-banner', 'no-fill' ); ?>
+            </a>
+          </div>
+          <nav class="page-header__nav__menu" role="navigation" aria-label="Main Navigation">
+            <?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
+            <div class="page-header__publications-nav" id="header-publications-nav">
+              <div class="page-header__publications-nav__heading">Publications</div>
+              <div class="page-header__publications-nav__list">
+                <button class="page-header__publications-nav__close-nav-trigger display--tablet-only" id="publications-nav-close-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="header-publications-nav" aria-label="close publications list">
+                  <?php echo get_svg( 'close' ); ?>
+                </button>
+                <ul>
+                  <?php
+                  $publications = get_publications();
+                  foreach ( $publications as $publication ):
+                  ?>
+                    <li><a href="<?php echo $publication['url']; ?>"><?php echo $publication['title']; ?></a></li>
+                  <?php
+                  endforeach;
+                  ?>
+                </ul>
+              </ul>
+            </div>
           </nav>
         </div>
+
+        <button class="PicoRule page-header__subscribe-button">Join</button>
 
       </div>
     </header>

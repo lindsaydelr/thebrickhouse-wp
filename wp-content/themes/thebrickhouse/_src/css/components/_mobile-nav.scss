@@ -1,0 +1,87 @@
+@media (max-width: $screen--sm-max) {
+  .page-header__logo {
+    flex: 1;
+    margin-left: 15px;
+  }
+
+  .page-header__nav {
+    background-color: $color--white;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    padding: $gutter--mobile;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100%);
+    transition: opacity $transition-duration--fast,
+      transform 0s $transition-duration--fast;
+    width: 100%;
+  }
+
+  .nav-is-open .page-header__nav {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity $transition-duration--fast;
+  }
+
+  .page-header__open-nav-trigger,
+  .page-header__close-nav-trigger {
+    color: $color--brick;
+    height: 50px;
+    margin-left: -15px;
+    margin-right: -10px;
+    margin-top: -10px;
+    padding: 10px;
+    width: 55px;
+
+    & .svg-container {
+      display: block;
+      height: 25px;
+      margin-left: 5px;
+      margin-top: 6px;
+      width: 30px;
+    }
+  }
+
+  // Extra logo in the popup mobile nav. (Doesn't appear on desktop.)
+  .page-header__nav__logo .svg-container {
+    height: 40px;
+    margin-top: $padding--sm;
+    width: 336px;
+  }
+
+  // Regular nav items.
+  .page-header__nav a {
+    margin-bottom: 10px;
+  }
+
+  // Publications list.
+  .page-header__publications-nav {
+    margin-left: 0;
+  }
+
+  // Publications list heading.
+  .page-header__publications-nav__heading {
+    color: $color--black;
+    font-family: $font-family--heading;
+    font-size: 26px;
+    margin-top: $padding--lg;
+    padding-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  // Publications list links in two columns.
+  .page-header__publications-nav__list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & li {
+      flex: 1 1 50%;
+    }
+  }
+
+  .page-header__publications-nav__list a {
+    margin-bottom: 2px;
+  }
+}

@@ -11,11 +11,16 @@ namespace TheBrickHouse;
 get_header();
 ?>
 
-<?php
-// List all publications.
-?>
-
 <div class="constrain">
+
+  <?php if ( get_field( 'homepage_tagline', 'options' ) ): ?>
+    <div class="homepage-tagline full-bleed--mobile">
+      <?php the_field( 'homepage_tagline', 'options' ); ?>
+    </div>
+
+    <div class="homepage-tagline-dots"></div>
+  <?php endif; ?>
+
 
   <?php
   // Get featured posts.
@@ -75,7 +80,7 @@ get_header();
     </div>
   <?php endif; ?>
 
-  <div class="mailing-list-cta">
+  <div class="mailing-list-cta full-bleed--mobile">
     <h2 class="mailing-list-cta__heading">Sign Up for Our Mailing List!</h2>
     <div class="mailing-list-cta__description">We promise to be nice.</div>
     <div class="mailing-list-cta__form">

@@ -1,18 +1,18 @@
 {
-    "key": "group_5fb5b8e082e8b",
-    "title": "Introductory Statement",
+    "key": "group_5fc580e344d4c",
+    "title": "Tagline",
     "fields": [
         {
-            "key": "field_5fb5b8e68cdcf",
-            "label": "Introductory Statement",
-            "name": "homepage_introductory_statement",
+            "key": "field_5fc580ec77e88",
+            "label": "Tagline",
+            "name": "homepage_tagline",
             "type": "wysiwyg",
-            "instructions": "A short paragraph shown on the homepage. Should probably include a link to the About page.",
+            "instructions": "This will appear at the very top of the homepage, above the featured content. Keep it short!",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "__wysiwyg-small __hide-label __wysiwyg-collapse-label",
+                "class": "__wysiwyg-collapse-label __wysiwyg-tiny __hide-label",
                 "id": ""
             },
             "default_value": "",
@@ -31,7 +31,7 @@
             }
         ]
     ],
-    "menu_order": 2,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1606779161
+    "modified": 1606779331
 }

@@ -1,11 +1,16 @@
 img {
   height: auto;
+  max-height: 100%;
   max-width: 100%;
 }
 
 .svg-container {
   display: inline-block;
+  height: 40px;
+  max-height: 100%;
+  max-width: 100%;
   vertical-align: middle;
+  width: 40px;
 }
 
 svg {

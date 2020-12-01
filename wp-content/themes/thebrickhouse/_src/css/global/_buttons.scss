@@ -14,13 +14,10 @@ input[type="submit"],
   font-family: $font-family--heading;
   font-size: $font-size--big;
   line-height: 1;
-  padding-bottom: 6px;
-  padding-left: $padding--md;
-  padding-right: $padding--md;
-  padding-top: 8px;
+  padding: 0;
   text-align: center;
-  transition: background-color $transition-duration--fast,
-    border $transition-duration--fast;
+  transition: background-color $transition-duration--faster,
+    border $transition-duration--faster;
 
   @media (hover: hover) {
     &:hover {

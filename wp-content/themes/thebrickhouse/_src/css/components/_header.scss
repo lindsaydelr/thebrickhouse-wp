@@ -1,5 +1,233 @@
-.header-subscribe-button {
-  background: $color--dark-tan;
-  color: $color--white;
+.page-header {
+  background-color: $color--white;
+  border-bottom: 2px solid $color--black;
+  height: $header-height--mobile;
+  left: 0;
+  padding: $gutter--mobile 0;
+  position: fixed;
+  top: 0;
   width: 100%;
+
+  @media (min-width: $screen--md) {
+    padding: $gutter--tablet 0;
+  }
+
+  @media (min-width: $screen--lg) {
+    height: $header-height--desktop;
+  }
+}
+
+.page-header .constrain {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 100%;
+}
+
+
+/* Header logo. */
+.page-header__logo {
+  & .svg-container {
+    display: block;
+    height: 22px;
+    width: 185px;
+  }
+
+  // Desktop: bigger logo.
+  @media (min-width: $screen--lg) {
+    & .svg-container {
+      height: 34px;
+      width: 286px;
+    }
+  }
+}
+
+
+/* Header navigation. */
+.page-header__nav {
+  color: $color--black;
+
+  // Tablet and up: horizontal list of nav items.
+  @media (min-width: $screen--md) {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-left: $padding--sm;
+  }
+}
+
+// Nav links.
+.page-header__nav a,
+.page-header__publications-nav__heading {
+  color: $color--brick;
+  display: block;
+  font-family: $font-family--serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: -5px;
+  padding: 5px 5px;
+  text-decoration: none;
+
+  @media (min-width: 375px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $screen--md) {
+    font-size: 16px;
+    margin: 0 2px;
+    padding: 5px 8px 6px;
+  }
+
+  @media (min-width: $screen--lg) {
+    font-size: 18px;
+    margin: 0 $padding--sm;
+  }
+}
+
+.page-header__nav__menu .menu-item a {
+  color: $color--brick;
+}
+
+// Black if current page.
+@media (min-width: $screen--md) {
+  .page-header__nav .current-menu-item a {
+    color: $color--black;
+  }
+}
+
+// Black on hover.
+@media (hover: hover) {
+  .page-header__nav a,
+  .page-header__nav__menu .menu-item a {
+    &:hover {
+      color: $color--black;
+    }
+  }
+}
+
+
+/*
+  Publications list.
+  - On mobile, it's just a list in the popup.
+  - On desktop, it's a dropdown in the nav.
+*/
+.page-header__publications-nav {
+  margin-left: 6px;
+  order: -1; // Move before the other nav.
+  position: relative;
+}
+
+.page-header__publications-nav__heading {
+  transition: all $transition-duration--faster;
+}
+
+// Tablet and up: Row of links.
+@media (min-width: $screen--md) {
+  .page-header__nav__menu,
+  .page-header__nav__menu .menu {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.page-header__publications-nav__list a {
+  color: $color--brick;
+  font-size: 16px;
+  margin-bottom: 1px;
+  margin-top: 2px;
+
+  @media (min-width: 375px) {
+    font-size: 19px;
+  }
+
+  @media (min-width: $screen--md) {
+    font-size: 16px;
+    margin: 5px 0 5px -8px;
+    padding-bottom: 5px;
+    padding-top: 3px;
+  }
+}
+
+// Tablet and up: Publications list hidden behind a popup.
+@media (min-width: $screen--md) {
+  .page-header__publications-nav__list {
+    background: $color--light-tan;
+    left: 2px;
+    max-height: 0;
+    min-width: 175px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 8px ;
+    position: absolute;
+    top: 100%;
+    transition: opacity $transition-duration--faster,
+      z-index 0s $transition-duration--faster,
+      max-height 0s $transition-duration--faster;
+    z-index: -1;
+  }
+
+  .page-header__publications-nav.nav-is-open .page-header__publications-nav__heading {
+    background-color: $color--light-tan;
+    color: #000;
+    cursor: default;
+  }
+
+  .page-header__publications-nav.nav-is-open .page-header__publications-nav__list {
+    max-height: 1000px;
+    opacity: 1;
+    transition: opacity $transition-duration--faster;
+    z-index: 1;
+  }
+
+  .page-header__publications-nav__close-nav-trigger {
+    padding: 10px;
+    position: absolute;
+    right: -4px;
+    top: -10px;
+    z-index: 2;
+
+    & .svg-container {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+// Desktop up: adjust spacing.
+@media (min-width: $screen--xl) {
+  .page-header__publications-nav__list {
+    left: 10px;
+  }
+}
+
+
+/* Join/Subscribe button. */
+.page-header__subscribe-button {
+  background: $color--brick;
+  color: $color--white;
+  font-size: 16px;
+  height: 100%;
+  padding: 8px 6px 4px;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color--orange;
+    }
+  }
+
+  @media (min-width: $screen--md) {
+    font-size: 22px;
+    padding-left: $padding--sm;
+    padding-right: $padding--sm;
+  }
+
+  @media (min-width: $screen--xl) {
+    font-size: 28px;
+    padding-left: $padding--md;
+    padding-right: $padding--md;
+  }
 }

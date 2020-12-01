@@ -11,7 +11,7 @@ $screen--xl-max: 1399px;
 $screen--xxl:    1440px;
 
 // Gutters.
-$gutter--mobile:  20px;
+$gutter--mobile:  12px;
 $gutter--tablet:  20px;
 $gutter--desktop: 40px;
 
@@ -58,7 +58,8 @@ $bg-color--light-gray: #eee;
 // Typography.
 $font-fallback--system:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-fallback--sans:    "Helvetica Neue", Helvetica, Arial, sans-serif, $font-fallback--system;
-$font-fallback--serif:   Georgia, Times, "Times New Roman", serif, $font-fallback--system;
+$font-fallback--serif:   "Lucida Bright", Cambria, Palatino, "Book Antiqua", Times, "Times New Roman", serif, $font-fallback--system;
+$font-fallback--heading: "Futura", "Century Gothic", "Arial Black", sans-serif, $font-fallback--system;
 
 $font-family--sans: 'League Spartan Regular', $font-fallback--sans;
 $font-family--serif: 'Faustina', $font-fallback--serif;
@@ -87,7 +88,7 @@ $font-size--page-title--desktop: 182px;
 
 $font-size--heading-1--mobile:   48px;
 $line-height--heading-1--mobile: 1.1;
-$font-size--heading-2--mobile:   36px;
+$font-size--heading-2--mobile:   32px;
 $line-height--heading-2--mobile: 1.1;
 $font-size--heading-3--mobile:   24px;
 $line-height--heading-3--mobile: 1.1;
@@ -105,9 +106,11 @@ $font-size--big:         24px;
 $line-height--big:       1.5;
 
 // Transition timing.
-$transition-duration--fast: 0.15s;
-$transition-duration--med:  0.30s;
-$transition-duration--slow: 0.75s;
+$transition-duration--faster: 0.1s;
+$transition-duration--fast:   0.15s;
+$transition-duration--med:    0.30s;
+$transition-duration--slow:   0.75s;
 
 // Element dimensions.
-$header-height: 60px;
+$header-height--mobile: 54px;
+$header-height--desktop: 75px;
