@@ -1,0 +1,113 @@
+.page-footer {
+  margin-top: $padding--xxl;
+
+  & ul,
+  & li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  & a {
+    color: $color--brick;
+    text-decoration: none;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color--black;
+      }
+    }
+  }
+}
+
+.page-footer--section {
+  padding: $padding--lg 0;
+}
+
+// Footer navigation.
+.page-footer__nav {
+  background: $color--light-tan;
+}
+
+.page-footer__nav__logo .svg-container {
+  height: 34px;
+  width: 286px;
+}
+
+.page-footer__nav__links {
+  margin-top: $padding--xs;
+}
+
+.page-footer__nav__links ul,
+.page-footer__publications__list ul {
+  @media (min-width: $screen--md) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $screen--md) {
+  .page-footer__nav__links li {
+    margin-right: $padding--md;
+  }
+
+  .page-footer__publications ul {
+    max-width: 600px;
+  }
+
+  .page-footer__publications li {
+    flex: 0 1 33%;
+  }
+}
+
+.page-footer__nav__links a,
+.page-footer__publications a {
+  color: $color--brick;
+  display: block;
+  font-weight: bold;
+  margin-bottom: -5px;
+  margin-left: -5px;
+  padding: 5px;
+
+  @media (min-width: $screen--md) {
+    font-size: 18px;
+  }
+}
+
+
+// Footer publication list.
+.page-footer__publications {
+  background: $color--light-tan;
+  padding-top: 0;
+}
+
+.page-footer__publications__heading {
+  font-family: $font-family--heading;
+  font-size: 22px;
+  margin-bottom: -5px;
+  text-transform: uppercase;
+}
+
+
+// Footer fine print/copyright.
+.page-footer__fine-print {
+  background: $color--brick;
+  color: $color--white;
+
+  & p {
+    margin: 0;
+  }
+
+  & a {
+    color: $color--white;
+    font-weight: bold;
+    text-decoration: underline;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color--light-tan;
+      }
+    }
+  }
+}
