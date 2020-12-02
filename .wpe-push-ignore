@@ -1,2 +1,3 @@
-/wp-content/themes/thebrickhouse/_src
-/wp-content/themes/thebrickhouse/.*
+_src
+.*
+webpack.*
