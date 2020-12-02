@@ -1,2 +1,2 @@
-wp-content/themes/thebrickhouse/_src
-wp-content/themes/thebrickhouse/.*
+/wp-content/themes/thebrickhouse/_src
+/wp-content/themes/thebrickhouse/.*
