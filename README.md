@@ -73,21 +73,12 @@ plugins, grab the latest staging/production database, and then get to work.
     ln -s app/public/wp-content/themes/brickhouse/ theme
     ```
 
-09. Mark this as the development environment by adding this constant to the
-    `wp-config.php` file around line 65 (you should still be the `app/public` WP
-    core directory):
-
-    ```php
-    // This is the development environment.
-    define( 'WP_ENVIRONMENT_TYPE', 'development' );
-    ```
-
-10. Activate the theme. Go to the
+09. Activate the theme. Go to the
     [WordPress admin theme settings](https://brickhouse.local/wp-admin/themes.php)
     and log in (username `admin` and password `admin` unless you changed that
     during setup). Under 'The Brick House' in the theme list, click 'Activate.'
 
-11. Once you activate the theme, you'll get a warning that some plugins are
+10. Once you activate the theme, you'll get a warning that some plugins are
     required. Click the 'Begin Installing Plugins' link in that warning. Select
     all of the plugins in the list, install them, then activate them.
 
