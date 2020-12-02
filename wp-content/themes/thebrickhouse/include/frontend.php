@@ -111,45 +111,6 @@ function customize_archive_title( $title ) {
 }
 add_filter( 'get_the_archive_title', __NAMESPACE__ . '\customize_archive_title' );
 
-// Register the 'year_filter' query variable so we can filter by it. For some
-// reason, WordPress will not allow me to use the built-in `year` and
-// `post_type` filters together. It keeps trying to load the index.php template
-// instead of trying for archive-press-release.php or archive.php or date.php.
-// I'm tired of fighting it. Support thread here:
-// https://wordpress.org/support/topic/year-archive-for-custom-post-type/
-function register_year_filter_query_var( $vars ) {
-  $vars[] = 'year_filter';
-  return $vars;
-}
-add_filter( 'query_vars', __NAMESPACE__ . '\register_year_filter_query_var' );
-
-// Alter WP query to support year filter for press releases and media coverage.
-function add_year_filter_to_media_coverage_and_press_releases( $query ) {
-  // Exit if not frontend or not main query.
-  if ( is_admin() || ! $query->is_main_query() ) {
-    return;
-  }
-
-  // Exit if we're not dealing with media coverage or press releases.
-  if ( empty( get_query_var( 'post_type' ) )
-    || ! ( get_query_var( 'post_type' ) == MEDIA_COVERAGE_POST_TYPE
-        || get_query_var( 'post_type' ) == PRESS_RELEASE_POST_TYPE )
-  ) {
-    return;
-  }
-
-  // Get *all* press releases and media coverage, because there's no pagination
-  // design available.
-  set_query_var( 'numberposts', -1 );
-  set_query_var( 'posts_per_page', -1 );
-
-  // If a year was selected, show only posts from that year.
-  if ( ! empty( get_query_var( 'year_filter' ) ) ) {
-    set_query_var( 'year', get_query_var( 'year_filter' ) );
-  }
-}
-add_filter( 'pre_get_posts', __NAMESPACE__ . '\add_year_filter_to_media_coverage_and_press_releases' );
-
 // Get SVG attachment uploaded to WordPress.
 function get_svg_attachment( $id, $dimensions = array() ) {
   $image_url      = wp_get_attachment_url( $id );

@@ -13,58 +13,6 @@ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
-/*! ./modules/accessibility */
-
-/*! ./modules/embeds */
-
-/*! ./modules/mobile-nav */
-
-/*! ./modules/publications-nav */
-
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-
-/*! exports [not provided] [no usage info] */
-
-/*! namespace exports */
-
-/*! other exports [not provided] [no usage info] */
-
-/*! reframe.js */
-
-/*! runtime requirements:  */
-
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
-
-/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
-
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
-
-/*! unknown exports (runtime-defined) */
-
-/*!*************************!*\
-  !*** ./_src/js/main.js ***!
-  \*************************/
-
-/*!***********************************!*\
-  !*** ./_src/js/modules/embeds.js ***!
-  \***********************************/
-
-/*!***************************************!*\
-  !*** ./_src/js/modules/mobile-nav.js ***!
-  \***************************************/
-
-/*!******************************************!*\
-  !*** ./_src/js/modules/accessibility.js ***!
-  \******************************************/
-
-/*!*********************************************!*\
-  !*** ./_src/js/modules/publications-nav.js ***!
-  \*********************************************/
-
-/*!****************************************************!*\
-  !*** ./node_modules/reframe.js/dist/reframe.es.js ***!
-  \****************************************************/
-
 /**
   reframe.js - Reframe.js: responsive iframes for embedded content
   @version v3.0.2

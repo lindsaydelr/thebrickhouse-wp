@@ -128,7 +128,7 @@ function get_external_post_details( $post_ID = null ) {
 
   $post_details = array(
     'publication'   => get_field( 'external_post_publication', $post_ID ),
-    'URL'           => $post_meta['url'],
+    'url'           => $post_meta['url'],
     'title'         => $post_meta['title'],
     'description'   => $post_meta['description'],
     'thumbnail_url' => $post_meta['image'],
@@ -151,10 +151,14 @@ function get_open_graph_tags( $url, $specified_tags = 0 ){
   @$document->loadHTML( file_get_contents( $url ) );
 
   // Get the <title> tag (which is not a meta tag).
-  $tags['title'] = $document->getElementsByTagName('title')->item(0)->nodeValue;
+  if ( $tags['title'] = $document->getElementsByTagName('title')->item(0) ) {
+    $tags['title'] = $document->getElementsByTagName('title')->item(0)->nodeValue;
+  }
 
   // Search for the first <time> tag.
-  $tags['date'] = $document->getElementsByTagName('time')->item(0)->getAttribute( 'datetime' );
+  if ( $document->getElementsByTagName('time')->item(0) ) {
+    $tags['date'] = $document->getElementsByTagName('time')->item(0)->getAttribute( 'datetime' );
+  }
 
   // Get all meta tags.
   foreach ( $document->getElementsByTagName( 'meta' ) as $meta_tag ) {

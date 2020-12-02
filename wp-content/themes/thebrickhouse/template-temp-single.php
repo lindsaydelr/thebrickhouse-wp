@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+/**
+ * Template Name: Temporary Single Page
+ */
+?><!DOCTYPE html>
 
 <html>
 
@@ -14,7 +18,6 @@
     <?php wp_head(); ?>
   </head>
 
-
   <body <?php body_class(); ?>>
 
     <header class="main-header">
@@ -22,7 +25,7 @@
         <div class="row">
           <div class="col">
             <a href="https://thebrick.house/" class="custom-logo-link" rel="home" aria-current="page">
-              <?php wp_get_attachment_image( '73' ); ?>
+              <?php echo wp_get_attachment_image( '73', array( '690', '122' ) ); ?>
             </a>
             <h2 class="tagline text-right">A new cooperative for free and independent press</h2>
           </div>

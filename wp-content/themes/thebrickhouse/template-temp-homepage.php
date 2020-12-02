@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+/**
+ * Template Name: Temporary Homepage
+ */
+?><!DOCTYPE html>
 
 <html>
 
@@ -21,7 +25,7 @@
         <div class="row">
           <div class="col">
             <a href="https://thebrick.house/" class="custom-logo-link" rel="home" aria-current="page">
-              <?php wp_get_attachment_image( '73' ); ?>
+              <?php echo wp_get_attachment_image( '73', array( '690', '122' ) ); ?>
             </a>
             <h2 class="tagline text-right">A new cooperative for free and independent press</h2>
           </div>
@@ -35,7 +39,7 @@
         <div class="col">
           <?php
           // Get homepage content.
-          get_the_content();
+          the_content();
           ?>
         </div>
       </div>

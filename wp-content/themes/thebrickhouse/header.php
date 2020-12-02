@@ -37,7 +37,7 @@ namespace TheBrickHouse;
 
   <div class="page-container">
 
-    <header class="page-header <?php echo $args['header_class']; ?>" role="banner">
+    <header class="page-header" role="banner">
       <div class="constrain">
 
         <a class="screen-reader-shortcut" href="#content" tabindex="0">Skip to Content</a>

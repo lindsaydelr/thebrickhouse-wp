@@ -20,11 +20,11 @@ function alter_posts_query( $query ) {
   }
 
   // Make sure external posts are included.
-  set_query_var( 'post_type',    INTERNAL_AND_EXTERNAL_POST_TYPES );
+  set_query_var( 'post_type', INTERNAL_AND_EXTERNAL_POST_TYPES );
 
   // If we're looking at the homepage, exclude the featured posts from the post list.
   if ( is_home() ) {
     set_query_var( 'post__not_in', get_field( 'homepage_featured_posts', 'option' ) );
   }
 }
-add_filter( 'pre_get_posts', __NAMESPACE__ . '\alter_query_to_remove_featured_posts_from_homepage_post_list' );
+add_filter( 'pre_get_posts', __NAMESPACE__ . '\alter_posts_query' );

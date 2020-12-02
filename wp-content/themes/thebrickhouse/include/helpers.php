@@ -24,7 +24,8 @@ function is_staging()  {
 
 // Check if this is development.
 function is_development()  {
-  if ( 'development' == wp_get_environment_type() ) {
+  if ( 'development' == wp_get_environment_type()
+    || 'local' == wp_get_environment_type() ) {
     return true;
   }
 }

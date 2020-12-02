@@ -35,6 +35,7 @@ get_header();
         $featured_posts = get_posts( array(
           'post_type' => INTERNAL_AND_EXTERNAL_POST_TYPES,
           'post__in'  => $featured_post_IDs,
+          'orderby'   => 'post__in'
         ) );
 
         // First post is the hero.
@@ -96,11 +97,15 @@ get_header();
     <div class="main">
       <div class="post-list">
         <?php
-        if ( have_posts() ):
-          while ( have_posts() ): the_post();
-            get_template_part( 'template-parts/post-preview', null, array() );
-          endwhile;
-        endif;
+        // Get all posts
+        $posts = get_posts( array(
+          'post_type'    => INTERNAL_AND_EXTERNAL_POST_TYPES,
+          'post__not_in' => $featured_post_IDs
+        ) );
+
+        foreach ( $posts as $post ): the_post();
+          get_template_part( 'template-parts/post-preview', null, array() );
+        endforeach;
         ?>
       </div>
     </div>

@@ -84,14 +84,15 @@ function get_publications() {
     return;
   }
 
+
   // Build array of publication data.
   $publications = array();
 
   foreach ( $publications_query as $publication ) {
-
-    // Get URL for this publication.
+      // Get URL for this publication.
     if ( get_field( 'publication_in_multisite_network', $publication ) ) {
       $site_ID = get_field( 'publication_site', $publication );
+      $site_ID = $site_ID[0];
       $publication_URL = get_site_url( $site_ID );
     }
     else {
