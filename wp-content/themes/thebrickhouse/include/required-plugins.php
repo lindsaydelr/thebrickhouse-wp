@@ -18,7 +18,7 @@ add_action( 'tgmpa_register', __NAMESPACE__ . '\register_required_plugins' );
 
 function register_required_plugins() {
 
-  $bundle_dir = get_template_directory() . '/lib/bundled-plugins/';
+  $bundle_dir = get_template_directory() . '/lib/bundled-plugins';
 
   $plugins = array(
 
@@ -38,7 +38,7 @@ function register_required_plugins() {
     array(
       'name'               => 'Advanced Custom Fields Pro',
       'slug'               => 'advanced-custom-fields-pro',
-      'source'             => $bundle_dir . 'advanced-custom-fields-pro.zip',
+      'source'             => $bundle_dir . '/advanced-custom-fields-pro.zip',
       'required'           => true,
       'version'            => '5.9.3',
       'force_activation'   => true,
@@ -49,7 +49,17 @@ function register_required_plugins() {
       'name'               => 'ACF Content Analysis for Yoast SEO',
       'slug'               => 'acf-content-analysis-for-yoast-seo',
       'required'           => true,
-      'version'            => '2.7',
+      'version'            => '3.0',
+      'force_activation'   => true,
+      'force_deactivation' => false,
+    ),
+
+    array(
+      'name'               => 'Advanced Custom Fields: Sites',
+      'slug'               => 'acf-sites',
+      'source'             => $bundle_dir . '/acf-sites.zip',
+      'required'           => true,
+      'version'            => '2.0.0',
       'force_activation'   => true,
       'force_deactivation' => false,
     ),
@@ -67,7 +77,7 @@ function register_required_plugins() {
       'name'               => 'Redirection',
       'slug'               => 'redirection',
       'required'           => true,
-      'version'            => '4.9.1',
+      'version'            => '4.9.2',
       'force_activation'   => true,
       'force_deactivation' => false,
     ),
@@ -76,16 +86,7 @@ function register_required_plugins() {
       'name'               => 'Yoast SEO',
       'slug'               => 'wordpress-seo',
       'required'           => true,
-      'version'            => '15.3',
-      'force_activation'   => true,
-      'force_deactivation' => false,
-    ),
-
-    array(
-      'name'               => 'Advanced Custom Fields: Sites',
-      'slug'               => 'acf-sites',
-      'required'           => true,
-      'version'            => '2.0.0',
+      'version'            => '15.4',
       'force_activation'   => true,
       'force_deactivation' => false,
     ),
@@ -106,7 +107,7 @@ function register_required_plugins() {
     array(
       'name'     => 'WP DB Migrate Pro',
       'slug'     => 'wp-migrate-db-pro',
-      'source'   => $bundle_dir . 'wp-migrate-db-pro-1.9.13.zip',
+      'source'   => $bundle_dir . '/wp-migrate-db-pro-1.9.13.zip',
       'required' => false,
       'version'  => '1.9.13',
     ),
@@ -114,7 +115,7 @@ function register_required_plugins() {
     array(
       'name'     => 'WP DB Migrate Pro: Multisite Tools',
       'slug'     => 'wp-migrate-db-pro-multisite-tools',
-      'source'   => $bundle_dir . 'wp-migrate-db-pro-multisite-tools-1.2.6.zip',
+      'source'   => $bundle_dir . '/wp-migrate-db-pro-multisite-tools-1.2.6.zip',
       'required' => false,
       'version'  => '1.2.6',
     ),
