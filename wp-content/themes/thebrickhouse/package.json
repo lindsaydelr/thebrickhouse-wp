@@ -59,7 +59,7 @@
     "dev": "NODE_ENV=development gulp dev",
     "build": "NODE_ENV=production gulp build",
     "dist": "NODE_ENV=production gulp dist",
-    "deploy-staging": "npm run dist; git commit -a -m '📦  Build assets for deployment to staging.'; git push origin primary; git push staging primary",
-    "deploy-production": "npm run dist; git commit -a -m '📦  Build assets for deployment to production.'; git push origin primary; git push production primary"
+    "deploy-staging": "npm run dist; git commit -a -m '📦  Build assets for deployment to staging.'; git push origin main; git push staging main",
+    "deploy-production": "npm run dist; git commit -a -m '📦  Build assets for deployment to production.'; git push origin main; git push production main"
   }
 }
